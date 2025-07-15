@@ -178,20 +178,19 @@ header {
     .container .header-buttons > div {
         width: 100%;
     }
-
+    .expense-list form.expense-list_item {
+        flex-direction: column;
+    }
     .expense-list form input {
         text-align: left;
         border: 1px dashed var(--orange);
         border-radius: 5px;
     }
-    .price {
-        width: 70%;
-    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
     body {
-        padding: 3rem 0;
+        padding: 3rem 1rem;
     }
 }
 

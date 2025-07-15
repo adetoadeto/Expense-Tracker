@@ -3,14 +3,12 @@ function addMore() {
     const form = document.createElement("form");
     form.setAttribute("class", "expense-list_item");
     form.innerHTML = ` 
-    <label>
-        <i class="fa-solid fa-bag-shopping"></i>
-    </label>
-    <input placeholder="Name of Expense" class="expense-name" maxlength="30" />
-    <input type="number" placeholder="Price" class="price" maxlength="10">
-    <button class="trash" onclick="remove()">
-        <i class="fa-solid fa-trash "></i>
-    </button>`
+     <label>
+     <i class="fa-solid fa-bag-shopping"></i>
+     </label>
+    <input required placeholder="Enter expense name" class="expense-name" maxlength="30" />
+    <input required type="number" placeholder="Price" class="price" maxlength="10">
+    <button class="trash" onclick="remove(this)"><i class="fa-solid fa-trash "></i></button>`
     parentElement.appendChild(form);
 }
 
