@@ -1,0 +1,197 @@
+:root {
+    --body-bg: linear-gradient(135deg, rgba(2, 168, 2, 0.5), rgba(253, 17, 76, 0.5), rgba(255, 115, 0, 0.5));
+    --green: rgb(2, 168, 2);
+    --red: rgb(253, 17, 76);
+    --orange: rgb(255, 115, 0);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 3rem 2rem;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-image: var(--body-bg);
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif
+}
+header {
+    letter-spacing: 0px;
+    font-size: 1.7rem;
+    color: white;
+}
+.container {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    width: fit-content;
+    height: auto;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.container .header-buttons {
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+.container .header-buttons, .header-buttons > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .header-buttons  > div{
+    gap: 1rem;
+    border-radius: 25px;
+    padding: 1rem;
+    height: 45px;
+    width: fit-content;
+    color: white;
+}
+.container .header-buttons  > div > div {
+    display: flex;
+     flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.3rem; 
+    padding: 0 1rem; 
+    align-items: center;
+}
+
+#expenses img, #balance i, #income i {
+    background-color: white;
+    padding: 0.6rem;
+    border-radius: 15px;
+    font-size: 1.7rem;
+}
+#balance {
+    background-color: var(--green)
+}
+#balance i {
+    color: var(--green);
+}
+
+#expenses {
+    background-color: var(--red);
+}
+.header-buttons #expenses img {
+    height: 30px;
+}
+
+#income {
+    background-color: var(--orange);
+}
+#income i {
+    color: var(--orange); 
+}
+
+#total-balance, 
+#total-expenses, 
+#total-income {
+    font-size: 1.3rem;
+   
+}
+
+.expense-list form {
+    gap: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+     flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    margin: 1rem 0;
+}
+.expense-list form input {
+    padding: 0.5rem;
+    border: none;
+    text-align: center;
+    font: inherit;
+    background-color: transparent;
+}
+.expense-list form label i {
+    font-size: 1.5rem;
+    color: var(--orange);
+    background-color: rgb(253, 240, 215);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+#monthly-income {
+    border: 1px dashed var(--green);
+    border-radius: 0.5rem;
+}
+#monthly-income:focus {
+    outline: none;
+}
+.price {
+   width: 12%;
+   text-align: end;
+}
+.expense-list form .trash {
+    border: none;
+    background-color: transparent;
+}
+.expense-list form .trash i {
+    color: var(--red); 
+    font-size: 1rem;
+}
+
+#action-btns {
+    display: flex;
+     flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+}
+#action-btns button {
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    background-color: white;
+    font: inherit;
+    color: white;
+}
+#action-btns button:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+#action-btns button:first-child {
+     background-color: var(--orange);
+}
+#action-btns button:last-child {
+     background-color: var(--red);
+}
+
+@media (max-width: 1300px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header {
+        font-size: 1.5rem;
+        letter-spacing: 0;
+        text-align: center;
+    }
+    .container .header-buttons > div {
+        width: 100%;
+    }
+
+    .expense-list form input {
+        text-align: left;
+        border: 1px dashed var(--orange);
+        border-radius: 5px;
+    }
+    .price {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 3rem 0;
+    }
+}
+

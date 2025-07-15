@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+         <h2>Expense <span>&#9203;</span> Tracker</h2>
+    </header>
+    <main class="container">
+        <div class="header-buttons">
+            <div id="balance">
+                <i class="fa-solid fa-coins"></i>
+                <div>
+                    <p>Balance</p>
+                    <p id="total-balance">-</p>
+                </div>
+            </div>
+
+            <div id="expenses">
+                <img src="./down-graphic.png" alt="decrease line chart">
+                <div>
+                    <p>Expenses</p>
+                    <p id="total-expenses">-</p>
+                </div>
+            </div>
+
+            <div id="income">
+                <i class="fa-solid fa-piggy-bank"></i>
+                <div>
+                    <p>Income</p>
+                    <p id="total-income">-</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="expense-list">
+            <form class="monthly-income">
+                <label for="monthly-income">My monthly income is: </label>
+                <input required type="number" max="10" maxlength="10" id="monthly-income" placeholder="Enter your monthly income amount">
+            </form>
+            <form class="expense-list_item">
+                <label><i class="fa-solid fa-bag-shopping"></i></label>
+                <input required placeholder="Enter expense name" class="expense-name" maxlength="30" />
+                <input required type="number" placeholder="Enter price" class="price" maxlength="10">
+                <button class="trash" onclick="remove(this)"><i class="fa-solid fa-trash "></i></button>
+            </form>
+        </div>
+        <div id="action-btns">
+            <button onclick="addMore()">Add More</button>
+            <button onclick="calculate()">Calculate</button>
+        </div>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
