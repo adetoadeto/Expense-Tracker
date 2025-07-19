@@ -113,6 +113,9 @@ header {
     font: inherit;
     background-color: transparent;
 }
+.expense-list form input::placeholder {
+    opacity: 0.5;
+}
 .expense-list form label i {
     font-size: 1.5rem;
     color: var(--orange);
@@ -150,7 +153,6 @@ header {
     border: none;
     padding: 0.8rem 1rem;
     border-radius: 8px;
-    background-color: white;
     font: inherit;
     color: white;
 }
@@ -158,12 +160,20 @@ header {
     cursor: pointer;
     font-weight: bold;
 }
-#action-btns button:first-child {
+#action-btns button#addItem{
      background-color: var(--orange);
 }
-#action-btns button:last-child {
-     background-color: var(--red);
+#action-btns button#calculate {
+     background-color: var(--green);
 }
+#action-btns button#clear {
+     background-color: var(--red);
+     opacity: 0.5;
+}
+#action-btns button#clear:hover {
+     opacity: 1;
+}
+
 
 @media (max-width: 1300px) {
     .container {

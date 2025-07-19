@@ -45,18 +45,19 @@
         <div class="expense-list">
             <form class="monthly-income">
                 <label for="monthly-income">My monthly income is: </label>
-                <input required type="number" max="10" maxlength="10" id="monthly-income" placeholder="Enter monthly income">
+                <input type="text" maxlength="20" id="monthly-income" placeholder="Enter monthly income">
             </form>
-            <form class="expense-list_item">
+            <!-- <form class="expense-list_item">
                 <label><i class="fa-solid fa-bag-shopping"></i></label>
-                <input required placeholder="Enter expense name" class="expense-name" maxlength="30" />
-                <input required type="number" placeholder="Price" class="price" maxlength="10">
+                <input placeholder="Enter expense name" class="expense-name" maxlength="30" />
+                <input type="text" placeholder="Price" class="price" maxlength="7">
                 <button class="trash" onclick="remove(this)"><i class="fa-solid fa-trash "></i></button>
-            </form>
+            </form> -->
         </div>
         <div id="action-btns">
-            <button onclick="addMore()">Add More</button>
-            <button onclick="calculate()">Calculate</button>
+            <button onclick="addItem()" id="addItem">Add Item</button>
+            <button onclick="calculate()" id="calculate">Calculate</button>
+            <button onclick="clearAll()" id="clear">Clear All</button>
         </div>
 
     </main>
